@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background: linear-gradient(#000000f1 40%,#00000067 70%, #0000 80%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+
+.header__item{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.text-decoration{
+    text-decoration: none;
+}
+
+/* Carrito */
+.Carrito{
+    margin-right: 30px;
+}
+
+.Acceder_and_carrito{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.Loging_button, .menu{  /* MENUNSJFBEFJKSNDJKBEHJCFBEVCBEJCV BEJHSCNJESXNKS XKES DNC JDCJEHGCBEHUBCVNHJRCBNEJNCXEWCNDKJBCKJAM */
+    background-color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s;
+}
+
+.Loging_button:hover, .menu:hover{
+    transform: scale(1.1);
+}
+
+/* Inicio */
+.header__list{
+    display: flex;
+    gap: 20px;
+}
+
+.header__link{
+    color: #fff;
+    transition: border-bottom 100ms;
+}
+
+.header__link:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.video_fondo{
+    z-index: -1;
+}
+
+/* aregando un transform a los botones  */
+
+.Logo_button img{
+    transition: transform 0.3s;
+}
+
+.Logo_button img:hover{
+    transform: scale(1.1);
+}
+
+.Carrito{
+    transition: transform 0.3s;
+}
+
+.Carrito:hover{
+    transform: scale(1.2);
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+    .header__link, .Loging_button, .Carrito{
+        display: none;
+    }
+
+    .menu, .carrito{
+        display: inherit;
+        margin-right: 20px;
+    }
+}
+
+/* Responssive navbar */
+
+.overline{
+    z-index: 2000;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #00000099;
+    overflow: hidden;
+    transition: all 0.3s ease 0s; /* ACERLO BIEN */
+}
+
+.overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__link_responsive{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s; /* ACERLO BIEN */
+    font-weight: 700;
+    color: #fff;
+}
+
+.header__link_responsive:hover{
+    transform: scale(1.1);
+}
+
+.close{
+    position: absolute;
+    top: 100px;
+    right: 45px;
+    font-size: 40px;
+}
+
+@media screen and (max-height:500px) {
+    .header__link_responsive{
+        font-size: 21px;
+    }
+
+    .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.close{
+    text-decoration: none;
+    color: #fff;
+}
