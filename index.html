@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <h1>Hola Mundo XD</h1>
+    <header class="header">
+        <nav class="header__nav">
+
+            <div class="logo">
+                <a href="#" class="Logo_button">
+                    <img src="img/nike_blanco.png" height="70px">
+                </a>
+            </div>
+            <ul class="header__list">
+                <li class="header__item"><a href="#" class="header__link text-decoration">Inicio</a></li>
+                <li class="header__item"><a href="#" class="header__link text-decoration">Sobre nosotros</a></li>
+            </ul>
+            <div class="Acceder_and_carrito">
+                <a href="" class="Loging_button text-decoration">Acceder</a>
+                <a href="" class="Carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </a>
+                <a onclick="openNav()" class="menu" href="#"><img src="img/menu.svg" alt=""></a>
+            </div>
+        </nav>
+
+        <div class="overline" id="mobile-menu">
+            <a onclick="closeNav()" class="close" href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" focusable="false" class="chakra-icon css-ny5q11" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-width="2" d="M3,3 L21,21 M3,21 L21,3"></path></svg></a>
+            <div class="overlay-content">
+                <a href="#" class="header__link_responsive text-decoration">Inicio</a>
+                <a href="#" class="header__link_responsive text-decoration">Sobre nosotros</a>
+                <a href="#" class="header__link_responsive text-decoration">Acceder</a>
+                <a href="#" class="header__link_responsive text-decoration">Carrito</a>
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <video class="video_fondo" src="video/videoplayback.webm" autoplay loop muted width="100%"></video>
+    </section>
+
+    <script src="javascript/nav.js" type="text/javascript"></script>
 </body>
 </html>
