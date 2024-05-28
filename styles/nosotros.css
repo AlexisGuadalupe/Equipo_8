@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card-img-top {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: auto;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 10px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000404;
+    border-radius: 5px;
+    border-style: outset;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    height: 80px;
+}
+
+main {
+    scale: 100%;
+}
+
+.nosotros {
+    color: aliceblue;
+    font-family: fantasy;
+}
+
+footer {
+    background-color: #000404;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .row {
+    margin-bottom: 15px;
+}
+
+footer .col-12 {
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* Hover del logo nike */
+
+.Logo, .card a{
+    cursor: pointer;
+    transition: scale 1s;
+}
+
+.Logo:hover{
+    scale: 1.3;
+}
+
