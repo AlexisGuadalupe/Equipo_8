@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registrarse</h2>
+        <form id="register-form" action="#" method="post">
+            <div class="input-group">
+                <input type="text" id="new-username" name="new-username" placeholder="Nombre de usuario" required>
+                <img src="https://i.pinimg.com/474x/8e/0c/fa/8e0cfaf58709f7e626973f0b00d033d0.jpg" alt="Icono de usuario" class="icon">
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="new-password" name="new-password" placeholder="Contraseña" required>
+                <span class="toggle-password" onclick="togglePassword('new-password')">👁️</span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="input-group">
+                <input type="submit" value="Registrarse">
+            </div>
+            <p class="login-link">¿Ya tenes una cuenta? <a href="login.html">Inicia sesión acá</a></p>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
