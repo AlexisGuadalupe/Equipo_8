@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form" action="#" method="post">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Usuario" required>
+                <img src="https://i.pinimg.com/474x/8e/0c/fa/8e0cfaf58709f7e626973f0b00d033d0.jpg" alt="Icono de usuario" class="icon">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+            </div>
+            <div class="input-group">
+                <input type="submit" value="Ingresar">
+            </div>
+            <p class="register-link">¿No tenes cuenta? <a href="registro.html">Regístrate acá</a></p>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
