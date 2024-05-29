@@ -97,7 +97,7 @@ ul,ol{
     display: none;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 580px){
     .header__link, .Loging_button, .Carrito{
         display: none;
     }
