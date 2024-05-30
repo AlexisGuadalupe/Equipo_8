@@ -119,7 +119,7 @@ ul,ol{
     top: 0;
     background-color: #00000099;
     overflow: hidden;
-    transition: all 0.3s ease 0s; /* ACERLO BIEN */
+    transition: all 0.3s ease 0s;
 }
 
 .overlay-content{
@@ -134,7 +134,7 @@ ul,ol{
     padding: 15px;
     font-size: 36px;
     display: block;
-    transition: all 0.3s ease 0s; /* ACERLO BIEN */
+    transition: all 0.3s ease 0s;
     font-weight: 700;
     color: #fff;
 }
@@ -165,4 +165,187 @@ ul,ol{
 .close{
     text-decoration: none;
     color: #fff;
+}
+
+
+
+/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+
+.product-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+.product-container {
+    height: 320px; 
+    max-width: 225px; 
+    border-radius: 10px;
+    border: 2px solid #e9e9e9;
+    transition: box-shadow 0.3s;
+    margin-top: 10px;
+    align-self: auto;
+    flex: 1px 1px 200px; 
+}
+
+
+.product-container:hover {
+    box-shadow: 4px 4px 12px #8f8f8f;
+}
+
+
+/*imagenes*/
+
+.img-container{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.img-container img{
+    height: 160px;
+    border-radius: 10px;
+}
+
+.img-transition {
+    transition: opacity 1.3s ease-in-out; 
+}
+
+/* titulo */
+
+.product-title{
+    color: #1F1F1F;
+    margin-left: 15px;
+    font-weight: 3000;
+    font-size: 15.5px;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+/* texto de cuotas*/
+.text {
+    color: #838585;
+    margin-left: 15px;
+    font-size: 13px;
+    margin-top:5px;
+    margin-bottom: 0px;
+}
+
+/* estrellas de rating*/
+
+ .estrellas {
+    margin-top: 0px;
+    margin-left: 15px;
+  }
+
+  .checked {
+    color: rgb(114, 114, 114);
+  }
+
+  /* texto de colores y botones de colores */
+
+h2 {
+    margin: 0;
+    display: inline-block;
+    }
+    
+.product-color {
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 0;
+    display: inline;
+    color: #707278;
+    font-weight: 3000;
+}
+ .round-button{
+        display: grid;
+        width:10px;
+        height:10px;
+    }
+
+.color1 {
+    border: 2px solid #851212;
+    background: #851212;
+    border-radius: 50%;
+
+}
+.color1:hover {
+    background: #cc2424;
+    border: 2px solid #cc2424;
+    border-radius: 50%;
+}
+.color2 {
+    border: 2px solid #000000;
+    background: #000000;
+    border-radius: 50%;
+
+}
+.color2:hover {
+    background: #2c2c2c;
+    border: 2px solid #2c2c2c;
+    border-radius: 50%;
+}
+.color3 {
+    border: 2px solid #949494;
+    background: #949494;
+    border-radius: 50%;
+
+}
+.color3:hover {
+    background: #c5c5c5;
+    border: 2px solid #c5c5c5;
+    border-radius: 50%;
+} 
+
+/*precio*/
+
+.product-price{
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: inline;
+    color: #707278;
+    font-weight: bold;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+/* boton arcoiris */
+
+.rainbow-button {
+    width: 70%;
+    height: 36px;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(90deg, #13C1EC 0%, #5991DE 29%, #6474E1 40%,#7849CF 60%, #7E3BCA 75%, #8E1AC3 85%);
+    display:flex;
+    align-items:center;
+    margin-left: 35px;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    justify-content:center;
+    font-size:12px;
+    color: #e9e9e9;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .product-container {
+        max-width: calc(50% - 10px); /* Two cards per row */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-container {
+        max-width: calc(100% - 10px); /* Single card per row */
+    }
 }
