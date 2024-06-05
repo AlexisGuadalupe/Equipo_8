@@ -1,33 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/carrito.css">
-</head>
-<body>
-    <div id =carrito class="carrito">
-        <div id =carrito class="Carrito">
-            <A<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>></A>
-    
-            <table id=lista-carrito class="product-list-container">
-                <thead>
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+    <title>Carrito</title>
 
-            <a href="#" id="vaciar-carrito" class="button u-full-widht">Vaciar Carrito</a>
-    
-        </div>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .Logo{
+            transition: scale 300ms;
+        }
+
+        .Logo:hover{
+            scale: 1.15;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000404;
+            height: 60px;
+        }
+
+        /* Sección principal | Main */
+
+        .main {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            margin-top: 15px;
+            flex-direction: column;
+            gap: 10px;
+            margin: 2px;
+        }
+
+        .container__product {
+            padding: 10px;
+            margin-top: 10px;
+            max-width: 600px;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: minmax(120px, 120px) 2fr 2fr;
+            grid-template-rows: 90px 30px;
+            grid-template-areas:
+                "img description description"
+                "img precio eliminar"
+            ;
+            box-shadow: 0 0 7px black;
+            border-radius: 15px;
+            transition: transform .5s;
+        }
+
+        .container__product:hover {
+            transform: scale(1.03);
+        }
+
+        .description__product,
+        .btn__comprar, 
+        .btn__eliminar,
+        .precio {
+            border-radius: inherit;
+            border: none;
+            background-color: #dfdfe3;
+
+        }
+
+        .img__product {
+            width: auto;
+            grid-area: img;
+            align-self: center;
+            transition: transform .6s;
+        }
+
+        .img__product:hover {
+            transform: scale(1.1);
+
+        }
+
+        .img__product img {
+            width: 100%;
+            height: auto;
+        }
+
         
-        <script src="../javascript/carrito.js"></script>
+
+        .description__product {
+            grid-area: description;
+            background-color: #373739;
+            color: #dfdfe3;
+            padding: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .precio {
+            grid-area: precio;
+            background-color: #dfdfe3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn__eliminar {
+            grid-area: eliminar;
+        }
+
+        .btn__comprar {
+            width: min(600px, 100%);
+            padding: 14px;
+            border-radius: 25px;
+            transition: transform .5s;
+        }
+
+        .btn__comprar:hover {
+            transform: scale(1.03);
+        }
+
+        /* Animaciones para botones */
+
+        .btn__comprar, 
+        .btn__eliminar,
+        span {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn__comprar::before, 
+        .btn__eliminar::before,
+        span::before  {
+            content: '';
+            position: absolute;
+            width: 130%;
+            height: 300%;
+            background-color: rgb(230, 175, 116);
+            top: 50px;
+            left: 50px;
+            transition: top .5s, left .5s;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .btn__eliminar::before {
+            background-color: rgb(222, 78, 78);
+            color: #dfdfe3;
+        }
+        .btn__comprar::before {
+            background-color: rgb(104, 231, 102);
+            color: #dfdfe3;
+        }
+
+        .btn__comprar:hover::before, 
+        .btn__eliminar:hover::before,
+        span:hover::before {
+            top: -30px;
+            left: -40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/nike_blanco.png" alt="Nike Logo" class="Logo" width="130px"></a>
+    </header>
+
+    <main class="main">
+        <div class="container__product">
+            <div class="img__product">
+                <img src="https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-nike-air-max-systm-mujer-blanca-92423117-510010dm9538102-1.jpg"
+                    alt="">
+            </div>
+            <p class="description__product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed optio saepe,
+                veniam laboriosam repellendus consequuntur porro adipisci sequi dolore fugiat amet neque aperiam. Rerum
+                esse aut, fuga unde omnis tempore?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate vitae, ex recusandae cumque eius
+                soluta facere excepturi, maxime ipsam cupiditate eaque delectus saepe perferendis sed adipisci
+                consectetur tempore sequi totam!</p>
+            <span class="precio">$15210.22</span>
+            <button class="btn__eliminar">Eliminar</button>
+        </div>
+        <div class="container__product">
+            <div class="img__product">
+                <img src="https://sneakerdenn.com/cdn/shop/products/image_63ba4104-f229-40d6-84d5-972dec3910fa_770x.jpg?v=1669086727"
+                    alt="">
+            </div>
+            <p class="description__product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed optio saepe,
+                veniam laboriosam repellendus consequuntur porro adipisci sequi dolore fugiat amet neque aperiam. Rerum
+                esse aut, fuga unde omnis tempore?</p>
+            <span class="precio">$15210.22</span>
+            <button class="btn__eliminar">Eliminar</button>
+        </div>
+        <div class="container__product">
+            <div class="img__product">
+                <img src="https://www.innvictus.com/medias/IN-DV0991-101-1.jpg?context=bWFzdGVyfGltYWdlc3wxMTQyNjV8aW1hZ2UvanBlZ3xpbWFnZXMvaDE1L2g0NC8xMTk3NzUzNjc2NTk4Mi5qcGd8OWM4ODZhYTdlOGU1OGJkY2M0MjE0ZDhjZTJhMTQwZTg5Y2NmYTFkN2I0MzM5NWZhZjc4YTRhYjg3MGZiMGMxYw"
+                    alt="">
+            </div>
+            <p class="description__product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed optio saepe,
+                veniam laboriosam repellendus consequuntur porro adipisci sequi dolore fugiat amet neque aperiam. Rerum
+                esse aut, fuga unde omnis tempore?</p>
+            <span class="precio">$15210.22</span>
+            <button class="btn__eliminar">Eliminar</button>
+        </div>
+        <div class="container__product">
+            <div class="img__product">
+                <img src="https://zonasport.com.mx/wp-content/uploads/2022/03/air-max-ngo-2.jpg"
+                    alt="">
+            </div>
+            <p class="description__product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed optio saepe,
+                veniam laboriosam repellendus consequuntur porro adipisci sequi dolore fugiat amet neque aperiam. Rerum
+                esse aut, fuga unde omnis tempore?</p>
+            <span class="precio">$15210.22</span>
+            <button class="btn__eliminar">Eliminar</button>
+        </div>
+        <button class="btn__comprar">Comprar</button>
+    </main>
 </body>
+
 </html>
